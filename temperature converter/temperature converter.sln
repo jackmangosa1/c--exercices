@@ -41,25 +41,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RangeAndAverage", "..\Range
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseInteger", "..\ReverseInteger\ReverseInteger.csproj", "{B460470B-0570-4FB0-B0AE-CFB0FD589F67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IgnoreThreeNumbers", "..\IgnoreThreeNumbers\IgnoreThreeNumbers.csproj", "{34BD58CD-472B-4196-B0F1-A4C2A11F1C3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IgnoreThreeNumbers", "..\IgnoreThreeNumbers\IgnoreThreeNumbers.csproj", "{34BD58CD-472B-4196-B0F1-A4C2A11F1C3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstAndLastDigitFinder", "..\FirstAndLastDigitFinder\FirstAndLastDigitFinder.csproj", "{726E051E-0CB5-4536-B689-EB7500B13E83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstAndLastDigitFinder", "..\FirstAndLastDigitFinder\FirstAndLastDigitFinder.csproj", "{726E051E-0CB5-4536-B689-EB7500B13E83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfDigitInNumber", "..\SumOfDigitInNumber\SumOfDigitInNumber.csproj", "{446821A8-2862-4ADD-A794-8369EC76FBE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOfDigitInNumber", "..\SumOfDigitInNumber\SumOfDigitInNumber.csproj", "{446821A8-2862-4ADD-A794-8369EC76FBE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvenDIigtsAddition", "..\EvenDIigtsAddition\EvenDIigtsAddition.csproj", "{191D46A9-7E00-4CA5-A241-A8B95C2A8019}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvenDIigtsAddition", "..\EvenDIigtsAddition\EvenDIigtsAddition.csproj", "{191D46A9-7E00-4CA5-A241-A8B95C2A8019}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PositiveAndNegativeArraySeparator", "..\PositiveAndNegativeArraySeparator\PositiveAndNegativeArraySeparator.csproj", "{A691ADF8-1DA2-46BE-BFB6-CE520F6ECE0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PositiveAndNegativeArraySeparator", "..\PositiveAndNegativeArraySeparator\PositiveAndNegativeArraySeparator.csproj", "{A691ADF8-1DA2-46BE-BFB6-CE520F6ECE0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonFinderMethod", "..\PersonFinderMethod\PersonFinderMethod.csproj", "{9C7DB464-0601-4C68-A57F-C0752C046760}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonFinderMethod", "..\PersonFinderMethod\PersonFinderMethod.csproj", "{9C7DB464-0601-4C68-A57F-C0752C046760}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessThenEvenNumberGetter", "..\LessThenEvenNumberGetter\LessThenEvenNumberGetter.csproj", "{DCFE2D7C-EF3C-4719-A38F-33ED856D4250}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LessThenEvenNumberGetter", "..\LessThenEvenNumberGetter\LessThenEvenNumberGetter.csproj", "{DCFE2D7C-EF3C-4719-A38F-33ED856D4250}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfDigit", "..\SumOfDigit\SumOfDigit.csproj", "{B11E2F66-B9FE-4A68-9907-1C1B5513461D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOfDigit", "..\SumOfDigit\SumOfDigit.csproj", "{B11E2F66-B9FE-4A68-9907-1C1B5513461D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxFinderMethod", "..\MaxFinder\MaxFinderMethod.csproj", "{C47AE101-708C-4B5F-8873-87E89ADEB422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxFinderMethod", "..\MaxFinder\MaxFinderMethod.csproj", "{C47AE101-708C-4B5F-8873-87E89ADEB422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringMixerMethod", "..\StringMixerMethod\StringMixerMethod.csproj", "{828EA200-ADEC-4A9F-8427-A216D2A09FCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringMixerMethod", "..\StringMixerMethod\StringMixerMethod.csproj", "{828EA200-ADEC-4A9F-8427-A216D2A09FCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountClass", "..\BankAccountClass\BankAccountClass.csproj", "{DD62CDAE-35AF-481A-A60D-D2C2FCDC4007}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -183,6 +185,10 @@ Global
 		{828EA200-ADEC-4A9F-8427-A216D2A09FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{828EA200-ADEC-4A9F-8427-A216D2A09FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{828EA200-ADEC-4A9F-8427-A216D2A09FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD62CDAE-35AF-481A-A60D-D2C2FCDC4007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD62CDAE-35AF-481A-A60D-D2C2FCDC4007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD62CDAE-35AF-481A-A60D-D2C2FCDC4007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD62CDAE-35AF-481A-A60D-D2C2FCDC4007}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
