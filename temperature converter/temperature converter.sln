@@ -61,7 +61,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxFinderMethod", "..\MaxFi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringMixerMethod", "..\StringMixerMethod\StringMixerMethod.csproj", "{828EA200-ADEC-4A9F-8427-A216D2A09FCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountClass", "..\BankAccountClass\BankAccountClass.csproj", "{DD62CDAE-35AF-481A-A60D-D2C2FCDC4007}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccountClass", "..\BankAccountClass\BankAccountClass.csproj", "{DD62CDAE-35AF-481A-A60D-D2C2FCDC4007}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberDivision", "..\NumberDivision\NumberDivision.csproj", "{62140975-CC3A-4D79-A5E3-C3AB4DFF4A5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NegativeNumberException", "..\NegativeNumberException\NegativeNumberException.csproj", "{26522CFC-87EE-47CF-A7FF-E88EBD601500}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RangeException", "..\RangeException\RangeException.csproj", "{D0FE3AEA-ECAB-43FC-B37D-C2F22CF313F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringToIntegerException", "..\StringToIntegerException\StringToIntegerException.csproj", "{6952BF3F-11AC-4CDB-B620-2B5E0AFC24B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivisionByZeroException", "..\DivisionByZeroException\DivisionByZeroException.csproj", "{DD9BA800-901D-4BC1-84D4-60CC3EC87C8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +199,26 @@ Global
 		{DD62CDAE-35AF-481A-A60D-D2C2FCDC4007}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD62CDAE-35AF-481A-A60D-D2C2FCDC4007}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD62CDAE-35AF-481A-A60D-D2C2FCDC4007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62140975-CC3A-4D79-A5E3-C3AB4DFF4A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62140975-CC3A-4D79-A5E3-C3AB4DFF4A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62140975-CC3A-4D79-A5E3-C3AB4DFF4A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62140975-CC3A-4D79-A5E3-C3AB4DFF4A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26522CFC-87EE-47CF-A7FF-E88EBD601500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26522CFC-87EE-47CF-A7FF-E88EBD601500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26522CFC-87EE-47CF-A7FF-E88EBD601500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26522CFC-87EE-47CF-A7FF-E88EBD601500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0FE3AEA-ECAB-43FC-B37D-C2F22CF313F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0FE3AEA-ECAB-43FC-B37D-C2F22CF313F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0FE3AEA-ECAB-43FC-B37D-C2F22CF313F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0FE3AEA-ECAB-43FC-B37D-C2F22CF313F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6952BF3F-11AC-4CDB-B620-2B5E0AFC24B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6952BF3F-11AC-4CDB-B620-2B5E0AFC24B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6952BF3F-11AC-4CDB-B620-2B5E0AFC24B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6952BF3F-11AC-4CDB-B620-2B5E0AFC24B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD9BA800-901D-4BC1-84D4-60CC3EC87C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD9BA800-901D-4BC1-84D4-60CC3EC87C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD9BA800-901D-4BC1-84D4-60CC3EC87C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD9BA800-901D-4BC1-84D4-60CC3EC87C8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
