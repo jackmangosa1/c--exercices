@@ -1,26 +1,30 @@
-﻿namespace OddAndEvenChecker
+﻿using InputValidationLibrary;
+
+namespace OddAndEvenChecker
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            try
-            {
-                Console.WriteLine("Enter a number");
-                int number  = Convert.ToInt32(Console.ReadLine());
-                if(number % 2 == 0)
-                {
+            int number;
 
-                   Console.WriteLine("The number is even");
-                }
-                else
-                {
-                    Console.WriteLine("The number is odd");
-                }
+            Console.WriteLine("Enter a number");
 
-            }catch(FormatException)
+
+            while (!InputValidator.ValidateInt(Console.ReadLine(), out number))
             {
-                Console.WriteLine("Please enter a valid number");
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+                Console.WriteLine("Enter a number:");
+            }
+
+
+            if (number % 2 == 0)
+            {
+                Console.WriteLine("The number is even");
+            }
+            else
+            {
+                Console.WriteLine("The number is odd");
             }
         }
     }

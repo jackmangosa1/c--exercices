@@ -1,28 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LibraryManagementSystem.Utilities
+﻿namespace LibraryManagementSystem.Utilities
 {
-    internal class OperationResult<T>
+    public class OperationResult<T>
     {
-        public Boolean success { get; set; }
-        public string message { get; set; }
-        public T? data { get; set; }
+        public Boolean Success { get; set; }
+        public string Message { get; set; }
+        public T? Data { get; set; }
 
-       
 
-        public OperationResult(Boolean success, string message, T? data)
+
+        public OperationResult(Boolean Success, string Message, T? Data)
         {
-            this.success = success;
-            this.message = message;
-            this.data = data;
+            this.Success = Success;
+            this.Message = Message;
+            this.Data = Data;
         }
 
-        
 
-      
+
+
     }
 }

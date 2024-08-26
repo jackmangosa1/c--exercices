@@ -1,16 +1,20 @@
-﻿namespace ASCIIConverter
+﻿using InputValidationLibrary;
+
+namespace ASCIIConverter
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a character");
-            try
+            Console.Write("Enter a character: ");
+            string input = Console.ReadLine();
+
+            if (InputValidator.ValidateChar(input, out char character))
             {
-                char character = Convert.ToChar(Console.ReadLine());
-                int ascii = Convert.ToSByte(character);
+                int ascii = Convert.ToInt32(character);
                 Console.WriteLine("The ASCII value of the character is: " + ascii);
-            }catch(FormatException)
+            }
+            else
             {
                 Console.WriteLine("Please enter a valid character");
             }

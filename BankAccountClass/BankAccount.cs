@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BankAccountClass
+﻿namespace BankAccountClass
 {
-    internal class BankAccount
+    public class BankAccount
     {
         public Guid UserId { get; }
-        public string FirstName {get;  set; }
-        public string LastName {get;  set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public int Balance { get; private set; } = 0;
 
         public BankAccount(Guid userId, string firstName, string lastName, int balance)

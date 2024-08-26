@@ -1,18 +1,32 @@
-﻿namespace PositiveAndNegativeArraySeparator
+﻿using InputValidationLibrary;
+
+namespace PositiveAndNegativeArraySeparator
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+            int arrayLength;
+
             Console.Write("How many elements do you want in your array?: ");
-            int arrayLength = Convert.ToInt32(Console.ReadLine());
+            while (!InputValidator.ValidatePositiveInt(Console.ReadLine(), out arrayLength))
+            {
+                Console.WriteLine("Invalid input. Please enter a positive integer.");
+                Console.Write("How many elements do you want in your array?: ");
+            }
+
             int[] arrayOfNumbers = new int[arrayLength];
 
-         
             for (int i = 0; i < arrayLength; i++)
             {
+                int element;
                 Console.Write($"Enter the {i + 1} element: ");
-                arrayOfNumbers[i] = Convert.ToInt32(Console.ReadLine());
+                while (!InputValidator.ValidateInt(Console.ReadLine(), out element))
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid integer.");
+                    Console.Write($"Enter the {i + 1} element: ");
+                }
+                arrayOfNumbers[i] = element;
             }
 
             int positiveCount = 0;
@@ -22,14 +36,13 @@
                 if (number > 0)
                 {
                     positiveCount++;
-                } 
-                else if (number < 0) {
+                }
+                else if (number < 0)
+                {
                     negativeCount++;
                 }
-                
             }
 
-            
             int[] positiveArray = new int[positiveCount];
             int[] negativeArray = new int[negativeCount];
 
@@ -47,7 +60,6 @@
                 }
             }
 
-            
             Console.WriteLine("Positive numbers are:");
             foreach (var number in positiveArray)
             {

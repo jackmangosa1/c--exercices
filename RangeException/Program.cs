@@ -1,23 +1,36 @@
-﻿namespace RangeException
+﻿using InputValidationLibrary;
+
+namespace RangeException
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             try
             {
                 Console.Write("Enter a number: ");
-                int number = Convert.ToInt32(Console.ReadLine());
-                if (number < 0 || number > 1000)
+                string input = Console.ReadLine();
+
+                if (!InputValidator.ValidateInt(input, out int number))
+                {
+                    throw new FormatException("Invalid input. Please enter a valid integer.");
+                }
+
+                if (!InputValidator.ValidateInRange(number, 0, 1000))
                 {
                     throw new ArgumentOutOfRangeException(nameof(number), "Number must be between 0 and 1000.");
                 }
 
-            } catch (ArgumentOutOfRangeException ex)
+                Console.WriteLine("Number is within the valid range.");
+            }
+            catch (FormatException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-           
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

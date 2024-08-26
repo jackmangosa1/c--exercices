@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LibraryManagementSystem.Models
+﻿namespace LibraryManagementSystem.Models
 {
-    internal class Fine
+    public class Fine
     {
-        public Guid FineID { get; set; }           
-        public int MemberID { get; set; }         
-        public decimal Amount { get; set; }       
-        public string Reason { get; set; }       
-        public DateTime DateIssued { get; set; }  
+        public Guid FineID { get; set; }
+        public int MemberID { get; set; }
+        public decimal Amount { get; set; }
+        public string Reason { get; set; }
+        public DateTime DateIssued { get; set; }
         public bool IsPaid { get; set; }
 
         public Fine(int memberId, decimal amount, string reason, DateTime dateIssued, Boolean isPaid)

@@ -1,16 +1,18 @@
 ﻿namespace StringMixerMethod
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            string result = mixStrings("aaa", "BBB");
-            Console.WriteLine(result); 
+            ;
+            Program program = new Program();
+            string result = program.MixStrings("aaa", "BBB");
+            Console.WriteLine(result);
 
-            
+
         }
 
-        static string mixStrings(string str1, string str2)
+        string MixStrings(string str1, string str2)
         {
             int maxLength = Math.Max(str1.Length, str2.Length);
             char[] result = new char[str1.Length + str2.Length];

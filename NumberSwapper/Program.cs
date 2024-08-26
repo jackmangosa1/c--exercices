@@ -1,16 +1,33 @@
-﻿namespace NumberSwapper
+﻿using InputValidationLibrary;
+
+namespace NumberSwapper
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the first number");
-            int firstNumber  = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the second number");
-            int secondNumber = Convert.ToInt32(Console.ReadLine());
+            int firstNumber, secondNumber;
+
+
+            Console.WriteLine("Enter the first number:");
+            while (!InputValidator.ValidateInt(Console.ReadLine(), out firstNumber))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+                Console.WriteLine("Enter the first number:");
+            }
+
+
+            Console.WriteLine("Enter the second number:");
+            while (!InputValidator.ValidateInt(Console.ReadLine(), out secondNumber))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+                Console.WriteLine("Enter the second number:");
+            }
+
             Console.WriteLine("Numbers before swapping:");
             Console.WriteLine("First number: " + firstNumber);
             Console.WriteLine("Second number: " + secondNumber);
+
 
             int temp = firstNumber;
             firstNumber = secondNumber;

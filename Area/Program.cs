@@ -1,21 +1,33 @@
-﻿namespace Area
+﻿using InputValidationLibrary;
+
+namespace Area
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             try
             {
                 Console.WriteLine("Enter the length of the rectangle: ");
-                double length = Convert.ToDouble(Console.ReadLine());
+                string lengthInput = Console.ReadLine();
+                if (!InputValidator.ValidateDouble(lengthInput, out double length))
+                {
+                    throw new FormatException("Invalid length. Please enter a valid number.");
+                }
+
                 Console.WriteLine("Enter the width of the rectangle: ");
-                double width  = Convert.ToDouble(Console.ReadLine());
+                string widthInput = Console.ReadLine();
+                if (!InputValidator.ValidateDouble(widthInput, out double width))
+                {
+                    throw new FormatException("Invalid width. Please enter a valid number.");
+                }
+
                 double area = length * width;
                 Console.WriteLine("The area of the rectangle is: " + area);
             }
-            catch (FormatException)
+            catch (FormatException ex)
             {
-                Console.WriteLine("Please enter a valid number");
+                Console.WriteLine(ex.Message);
             }
         }
     }

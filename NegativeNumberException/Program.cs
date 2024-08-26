@@ -1,15 +1,24 @@
-﻿namespace NegativeNumberException
+﻿using InputValidationLibrary;
+
+namespace NegativeNumberException
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            int number;
+
+            Console.Write("Enter a number: ");
+            while (!InputValidator.ValidateInt(Console.ReadLine(), out number))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+                Console.Write("Enter a number: ");
+            }
+
             try
             {
-                Console.Write("Enter a number: ");
-                int number = Convert.ToInt32(Console.ReadLine());
-                checkIfNegative(number);
-
+                Program program = new Program();
+                program.CheckIfNegative(number);
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -17,10 +26,11 @@
             }
         }
 
-    public static void checkIfNegative(int number)
+        public void CheckIfNegative(int number)
         {
-            if (number < 0) { 
-            throw new ArgumentOutOfRangeException(nameof(number), "Negative numbers are not allowed.");
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(number), "Negative numbers are not allowed.");
             }
         }
     }

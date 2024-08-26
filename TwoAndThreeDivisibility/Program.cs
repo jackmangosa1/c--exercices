@@ -1,25 +1,29 @@
-﻿namespace TwoAndThreeDivisibility
+﻿using InputValidationLibrary;
+
+namespace TwoAndThreeDivisibility
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            try
+            Console.Write("Enter a number");
+
+            string input = Console.ReadLine();
+
+            if (InputValidator.ValidateInt(input, out int number))
             {
-                Console.WriteLine("Enter a number");
-                int number  = Convert.ToInt32(Console.ReadLine());
-                if(number % 2 == 0 && number % 3 == 0)
+                if (number % 2 == 0 && number % 3 == 0)
                 {
-                    int mutiplication = 2 * 3;
-                    Console.WriteLine("The multiplication of 2 and 3 is:" + " " + mutiplication );
+                    int multiplication = 2 * 3;
+                    Console.WriteLine("The multiplication of 2 and 3 is: " + multiplication);
                 }
                 else
                 {
                     int addition = 2 + 3;
-                    Console.WriteLine("The addition of 2 and 3 is:" + " " + addition);
+                    Console.WriteLine("The addition of 2 and 3 is: " + addition);
                 }
-
-            }catch(FormatException)
+            }
+            else
             {
                 Console.WriteLine("Please enter a valid number");
             }

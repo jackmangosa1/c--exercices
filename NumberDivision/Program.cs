@@ -1,29 +1,38 @@
-﻿namespace NumberDivision
+﻿using InputValidationLibrary;
+
+namespace NumberDivision
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            try {
+            int firstNumber, secondNumber;
+
+
+            Console.Write("Enter the first number: ");
+            while (!InputValidator.ValidateInt(Console.ReadLine(), out firstNumber))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
                 Console.Write("Enter the first number: ");
-                int firstNumber = int.Parse(Console.ReadLine());
+            }
+
+
+            Console.Write("Enter the second number: ");
+            while (!InputValidator.ValidateInt(Console.ReadLine(), out secondNumber))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
                 Console.Write("Enter the second number: ");
-                int secondNumber = int.Parse(Console.ReadLine());
+            }
 
+            try
+            {
                 int division = firstNumber / secondNumber;
-                Console.Write($"The division of {firstNumber} by {secondNumber} is {division}.");
+                Console.WriteLine($"The division of {firstNumber} by {secondNumber} is {division}.");
             }
-            catch(FormatException e)
+            catch (DivideByZeroException)
             {
-                Console.Write("Please enter a valid number.");
+                Console.WriteLine("Cannot divide by zero.");
             }
-
-            catch(DivideByZeroException e)
-            {
-                Console.Write("Cannot divide by zero.");
-            }
-           
-           
         }
     }
 }

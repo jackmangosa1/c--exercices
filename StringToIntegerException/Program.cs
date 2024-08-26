@@ -1,18 +1,21 @@
-﻿namespace StringToIntegerException
+﻿using InputValidationLibrary;
+
+namespace StringToIntegerException
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            
-            try
+            Console.Write("Enter a number: ");
+            string input = Console.ReadLine();
+
+            if (InputValidator.ValidateInt(input, out int number))
             {
-                Console.Write("Enter a number:");
-                int number = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine($"The converted string is {number} ");
+                Console.WriteLine($"The converted number is {number}");
             }
-            catch (FormatException ex) { 
-                Console.WriteLine("Invalid input please enter a valid integer");
+            else
+            {
+                Console.WriteLine("Invalid input, please enter a valid integer.");
             }
         }
     }

@@ -1,23 +1,27 @@
-﻿namespace MonthAndYearGetter
+﻿using InputValidationLibrary;
+
+namespace MonthAndYearGetter
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            try
+            int days;
+
+
+            Console.Write("Enter number of days: ");
+            while (!InputValidator.ValidateInt(Console.ReadLine(), out days) || days < 0)
             {
+                Console.WriteLine("Invalid input. Please enter a valid non-negative integer.");
                 Console.WriteLine("Enter number of days:");
-                int days = Convert.ToInt32((Console.ReadLine()));
-                int months = days / 30;
-                int years = days / 365;
-
-                Console.WriteLine("The number of months is: " + months);
-                Console.WriteLine("The number of years is: " + years);
-
-            }catch(FormatException)
-            {
-                Console.WriteLine("Please enter a valid number");
             }
+
+
+            int months = days / 30;
+            int years = days / 365;
+
+            Console.WriteLine("The number of months is: " + months);
+            Console.WriteLine("The number of years is: " + years);
         }
     }
 }

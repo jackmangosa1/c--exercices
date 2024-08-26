@@ -1,19 +1,35 @@
-﻿namespace SameNumberChecker
+﻿using InputValidationLibrary;
+
+namespace SameNumberChecker
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             try
             {
                 Console.WriteLine("Enter the first number");
-                int firstNumber  = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter the second number");
-                int secondNumber = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter the third number");
-                int thirdNumber = Convert.ToInt32(Console.ReadLine());
+                string firstInput = Console.ReadLine();
+                if (!InputValidator.ValidateInt(firstInput, out int firstNumber))
+                {
+                    throw new FormatException("Invalid input for the first number. Please enter a valid integer.");
+                }
 
-                if(firstNumber == secondNumber && secondNumber == thirdNumber)
+                Console.WriteLine("Enter the second number");
+                string secondInput = Console.ReadLine();
+                if (!InputValidator.ValidateInt(secondInput, out int secondNumber))
+                {
+                    throw new FormatException("Invalid input for the second number. Please enter a valid integer.");
+                }
+
+                Console.WriteLine("Enter the third number");
+                string thirdInput = Console.ReadLine();
+                if (!InputValidator.ValidateInt(thirdInput, out int thirdNumber))
+                {
+                    throw new FormatException("Invalid input for the third number. Please enter a valid integer.");
+                }
+
+                if (firstNumber == secondNumber && secondNumber == thirdNumber)
                 {
                     Console.WriteLine("Numbers are the same");
                 }
@@ -21,10 +37,10 @@
                 {
                     Console.WriteLine("Numbers are not the same");
                 }
-
-            }catch(FormatException)
+            }
+            catch (FormatException ex)
             {
-                Console.WriteLine("Please enter a valid number");
+                Console.WriteLine(ex.Message);
             }
         }
     }

@@ -1,11 +1,22 @@
-﻿namespace NumberToLetter
+﻿using InputValidationLibrary;
+
+namespace NumberToLetter
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number");
-            int number = Convert.ToInt32(Console.ReadLine());
+            int number;
+
+
+            Console.Write("Enter a number:");
+            while (!InputValidator.ValidateInt(Console.ReadLine(), out number))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+                Console.Write("Enter a number:");
+            }
+
+
             switch (number)
             {
                 case 0:
@@ -17,21 +28,29 @@
                 case 2:
                     Console.WriteLine("Two");
                     break;
-                case 3: Console.WriteLine("Three");
+                case 3:
+                    Console.WriteLine("Three");
                     break;
-                case 4: Console.WriteLine("Four");
-                    break; 
-                case 5: Console.WriteLine("Five");
+                case 4:
+                    Console.WriteLine("Four");
                     break;
-                case 6: Console.WriteLine("Six");
+                case 5:
+                    Console.WriteLine("Five");
                     break;
-                case 7: Console.WriteLine("Seven");
+                case 6:
+                    Console.WriteLine("Six");
                     break;
-                case 8: Console.WriteLine("Eight");
+                case 7:
+                    Console.WriteLine("Seven");
                     break;
-                case 9: Console.WriteLine("Nine");
+                case 8:
+                    Console.WriteLine("Eight");
                     break;
-                default: Console.WriteLine("Number too big");
+                case 9:
+                    Console.WriteLine("Nine");
+                    break;
+                default:
+                    Console.WriteLine("Number too big");
                     break;
             }
         }

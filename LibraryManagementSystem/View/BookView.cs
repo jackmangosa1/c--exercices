@@ -1,15 +1,10 @@
 ﻿using LibraryManagementSystem.Models;
 using LibraryManagementSystem.Services;
 using LibraryManagementSystem.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.View
 {
-    internal class BookView
+    public class BookView
     {
         private readonly BookService _bookService;
 
@@ -18,19 +13,20 @@ namespace LibraryManagementSystem.View
             _bookService = bookService;
         }
 
-        public void GetBooks() 
+        public void GetBooks()
         {
             OperationResult<IEnumerable<Book>> result = _bookService.GetBooks();
-           
-            if (result.success)
+
+            if (result.Success)
             {
-                foreach (Book book in result.data)
+                foreach (Book book in result.Data)
                 {
-                    Console.WriteLine($"\nBook title: {book.Title}\nBook author: {book.Author}\nGenre: {book.Genre}\nISBN: {book.ISBN}\nBook ID: {book.BookID}\n");
+                    Console.WriteLine($"\nBook title: {book.Title}\nBook author: {book.Author}\nGenre: {book.Genre}\nISBN: {book.ISBN}\nBook ID: {book.BookID}\nNumber of Copies: {book.CopiesAvailable}\n");
                 }
             }
-            else { 
-                Console.WriteLine(result.message);
+            else
+            {
+                Console.WriteLine(result.Message);
             }
         }
 
@@ -56,7 +52,7 @@ namespace LibraryManagementSystem.View
             }
 
             OperationResult<Book> result = _bookService.CreateBook(title, author, ISBN, genre, copies);
-            Console.WriteLine(result.message);
+            Console.WriteLine(result.Message);
         }
 
 
@@ -70,7 +66,7 @@ namespace LibraryManagementSystem.View
             }
 
             OperationResult<IEnumerable<Book>> booksResult = _bookService.GetBooks();
-            Book bookToUpdate = booksResult.data?.FirstOrDefault(b => b.BookID == guid);
+            Book bookToUpdate = booksResult.Data?.FirstOrDefault(b => b.BookID == guid);
 
             if (bookToUpdate == null)
             {
@@ -108,13 +104,13 @@ namespace LibraryManagementSystem.View
                 genre = bookToUpdate.Genre;
             }
 
-            
+
             int copies = bookToUpdate.CopiesAvailable;
-            
+
 
             Console.Write($"Current number of copies available: {bookToUpdate.CopiesAvailable}\tNew number of copies: ");
             string copiesString = Console.ReadLine();
-            if(string.IsNullOrEmpty(copiesString))
+            if (string.IsNullOrEmpty(copiesString))
             {
                 copies = bookToUpdate.CopiesAvailable;
             }
@@ -124,7 +120,7 @@ namespace LibraryManagementSystem.View
             }
 
             OperationResult<Book> result = _bookService.UpdateBook(guid, title, author, ISBN, genre, copies);
-            Console.WriteLine(result.message);
+            Console.WriteLine(result.Message);
         }
 
         public void DeleteBook()
@@ -137,7 +133,7 @@ namespace LibraryManagementSystem.View
             }
 
             OperationResult<Book> deletedBook = _bookService.DeleteBook(guid);
-            Console.WriteLine(deletedBook.message);
+            Console.WriteLine(deletedBook.Message);
         }
 
 

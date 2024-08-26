@@ -1,17 +1,19 @@
 ﻿namespace LessThenEvenNumberGetter
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            int[] evenNumbers = getLessThenEvenNumber(10);
-            foreach (int  number in evenNumbers)
+
+            Program program = new Program();
+            int[] evenNumbers = program.GetLessThenEvenNumber(10);
+            foreach (int number in evenNumbers)
             {
                 Console.Write($"{number} ");
             }
         }
 
-        static int[] getLessThenEvenNumber(int number)
+        int[] GetLessThenEvenNumber(int number)
         {
             int evenNumberCount = number / 2;
             int[] evenNumbers = new int[evenNumberCount];
@@ -22,7 +24,7 @@
                 if (i % 2 == 0)
                 {
                     evenNumbers[index++] = i;
-                    
+
                 }
             }
 
