@@ -1,4 +1,5 @@
-﻿using LibraryManagementSystem.Services;
+﻿using LibraryManagementSystem.Enums;
+using LibraryManagementSystem.Services;
 using LibraryManagementSystem.View;
 
 namespace LibraryManagementSystem
@@ -21,41 +22,39 @@ namespace LibraryManagementSystem
                 menuView.DisplayMainMenu();
                 int option = menuView.GetMenuOption();
 
-                switch (option)
+                switch ((MenuOption)option)
                 {
-                    case 1:
+                    case MenuOption.CreateBook:
                         bookView.CreateBook();
                         break;
-                    case 2:
+                    case MenuOption.UpdateBook:
                         bookView.UpdateBook();
                         break;
-                    case 3:
+                    case MenuOption.DeleteBook:
                         bookView.DeleteBook();
                         break;
-                    case 4:
+                    case MenuOption.GetBooks:
                         bookView.GetBooks();
                         break;
-                    case 5:
+                    case MenuOption.CreateMember:
                         memberView.CreateMember();
                         break;
-                    case 6:
+                    case MenuOption.GetMembers:
                         memberView.GetMembers();
                         break;
-                    case 7:
+                    case MenuOption.GetLoans:
                         loanView.GetLoans();
                         break;
-                    case 8:
+                    case MenuOption.BorrowBook:
                         loanView.BorrowBook();
                         break;
-                    case 9:
+                    case MenuOption.ReturnBook:
                         loanView.ReturnBook();
                         break;
-                    case 10:
+                    case MenuOption.Exit:
                         menuView.DisplayExitMessage();
                         running = false;
                         break;
-
-
                 }
             }
         }

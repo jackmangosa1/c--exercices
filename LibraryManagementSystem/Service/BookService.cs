@@ -48,8 +48,6 @@ namespace LibraryManagementSystem.Services
                 return new OperationResult<Book>(false, ex.Message, null);
 
             }
-
-
         }
 
         public OperationResult<Book> UpdateBook(Guid bookId, string title, string author, string ISBN, string genre, int copies)
@@ -74,10 +72,6 @@ namespace LibraryManagementSystem.Services
 
                 result = new OperationResult<Book>(true, "Book updated Successfully", bookToUpdate);
                 return result;
-
-
-
-
             }
             catch (Exception ex)
             {
@@ -102,10 +96,6 @@ namespace LibraryManagementSystem.Services
             {
                 return new OperationResult<Book>(false, ex.Message, null);
             }
-
         }
-
-
     }
-
 }

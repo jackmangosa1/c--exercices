@@ -113,8 +113,6 @@ namespace LibraryManagementSystem.View
                 return;
             }
 
-
-
             OperationResult<Book> returnResult = _loanService.ReturnBook(bookId, memberId, DateTime.Now);
             if (returnResult.Success)
             {

@@ -12,7 +12,6 @@ namespace LibraryManagementSystem.Services
         public LoanService(BookService bookService)
         {
             _bookService = bookService;
-
         }
 
         public OperationResult<IEnumerable<Loan>> GetLoans()
@@ -66,7 +65,6 @@ namespace LibraryManagementSystem.Services
         {
             try
             {
-
                 OperationResult<IEnumerable<Book>> bookResult = _bookService.GetBooks();
                 if (!bookResult.Success)
                 {
@@ -99,6 +97,5 @@ namespace LibraryManagementSystem.Services
                 return new OperationResult<Book>(false, ex.Message, null);
             }
         }
-
     }
 }

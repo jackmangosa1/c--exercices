@@ -131,14 +131,8 @@ namespace LibraryManagementSystem.View
                 Console.WriteLine("Invalid book ID.");
                 return;
             }
-
             OperationResult<Book> deletedBook = _bookService.DeleteBook(guid);
             Console.WriteLine(deletedBook.Message);
         }
-
-
-
-
-
     }
 }
